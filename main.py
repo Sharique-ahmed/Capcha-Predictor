@@ -3,6 +3,7 @@ import random
 from flask import Flask,request,jsonify,render_template
 from prediction import predictImage
 import os
+import shutil
 
 
 app = Flask(__name__)
@@ -67,7 +68,13 @@ def UploadCapcha():
 
             if file.filename == "":
                 return jsonify({"error": "No selected file"}), 400
-            
+
+            upload_img_path = os.path.join("static","Uploaded Images")
+
+            if os.path.exists(upload_img_path):
+                shutil.rmtree(upload_img_path)
+
+            os.makedirs(upload_img_path)
             if file:
                 # Save the file
                 file_path = os.path.join("static","Uploaded Images", file.filename)
