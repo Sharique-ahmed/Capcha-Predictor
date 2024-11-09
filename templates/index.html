@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capcha Solver</title>
+    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Matemasie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Nerko+One&family=Oxanium:wght@200..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Simple Capcha Predictor</h1>
+    </header>
+       
+    <div id="loaderOverlay" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <div class="explanation_div">
+        <div class="explanation">
+            <h1 class="hi">Hi There👋!</h1>
+            <p>
+                This is a simple CAPTCHA Predictor, that uses the Deep learning algorithm called CONVOLUTIONAL NEURAL NETWORK (CNN). CNN are specifics for handling visaul data!
+                It will process the image and the output will be shown in the bottom. The model's accuarcy is <strong>92%</strong> 
+                <br>
+                <br>
+                <strong class="note">NOTE: Please Mention the count of the characters present in the capcha image, this helps better processing</strong> 
+                <br>
+                <input type="text" name="" id="characters" placeholder="Count" required>
+            </p>
+        </div>
+        <div class="uploadCapcha">
+            <div class="wrapper">
+                <div class="file-upload">
+                  <input type="file"id="myFile" name="filename" class="upload" />
+                  <i class="fa fa-arrow-up"></i>
+                </div>
+            </div>
+            <button id="uploadCapchaBtn">Submit</button>
+        </div>
+    </div>    
+    <div class="outputContainer" id="ouptutDiv" style="display: none;"> 
+        <div class="originalImg">
+            <img src="" alt="" id="capchaImg">
+        </div> 
+        <div>
+            <h1 class="outputTitle">Output ⬇️</h1>
+            <p id="output"></p>
+        </div>    
+    </div>
+
+    <script src="static\js\index.js"></script>
+</body>
+</html>
+
+
