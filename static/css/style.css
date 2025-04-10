@@ -34,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    height: 340px;
+    height: 300px;
     width: 80%;
     margin: auto;
     background-color: #273248;
@@ -168,8 +168,8 @@ body {
 
     .file-upload{
 
-        height:70%;
-        width:70%;
+        height:160px;
+        width:160px;
         border-radius: 100px;
         position:relative;
 
